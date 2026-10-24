@@ -152,8 +152,8 @@ a{color:inherit}
 .wa-float .wai{width:22px;height:22px}
 .mn-overlay{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(12,29,99,.7)}
 .mn-overlay[hidden]{display:none}
-.mn-box{position:relative;max-width:460px;width:100%;padding:44px 34px 34px;background:#fff;border-radius:var(--r);text-align:center;box-shadow:0 30px 70px rgba(0,0,0,.4)}
-.mn-box h2{font-size:2.2rem;color:var(--navy);margin-bottom:12px}
+.mn-box{position:relative;max-width:460px;width:100%;padding:70px 34px 34px;background:#fff;border-radius:var(--r);text-align:center;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.mn-box h2{font-size:2rem;color:var(--navy);margin-bottom:12px}
 .mn-box p{margin:0 0 24px;color:var(--muted)}
 .mn-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border:0;border-radius:50%;background:var(--panel);color:var(--navy);font-size:26px;line-height:40px;cursor:pointer;padding:0}
 .mn-x:hover{background:var(--blue);color:#fff}
