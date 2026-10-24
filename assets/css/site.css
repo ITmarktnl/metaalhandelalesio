@@ -195,3 +195,41 @@ a{color:inherit}
   .logo img{width:140px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* werkgebied + plaatspagina's */
+.chips a{text-decoration:none;color:inherit;display:block}
+.chips li{transition:background .2s,color .2s}
+.chips li:hover{background:var(--navy);color:#fff}
+.chips-lg li{font-size:1.02rem;padding:11px 20px}
+.items-3{grid-template-columns:repeat(3,1fr)}
+.faq-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
+.faq{border-bottom:2px solid var(--line);padding:6px 0}
+.faq summary{cursor:pointer;list-style:none;font:400 1.5rem/1.2 Anton,sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--navy);padding:16px 44px 16px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:var(--panel);text-align:center;font:700 1.4rem/34px Inter,sans-serif;color:var(--navy)}
+.faq[open] summary::after{content:"–";background:var(--blue);color:#fff}
+.faq p{margin:0 0 16px;color:var(--muted);max-width:60ch}
+.links-list{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.links-list a{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-radius:20px;background:var(--panel);color:var(--navy);font-weight:800;text-decoration:none;transition:background .2s,transform .2s}
+.links-list a::after{content:"→";font-weight:800}
+.links-list a:hover{background:var(--navy);color:#fff;transform:translateY(-3px)}
+
+/* gemaakt met ♥ door ITmarkt.nl */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.credit-row{display:flex;justify-content:center;padding:34px 0 38px;border-top:1px solid rgba(255,255,255,.16)}
+.credit{display:block;width:min(560px,100%);text-decoration:none;border-radius:24px;padding:14px 22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);transition:background .25s,transform .25s}
+.credit:hover{background:rgba(255,255,255,.14);transform:translateY(-3px)}
+.credit svg{display:block;width:100%;height:auto;overflow:visible}
+.credit text{font-family:Anton,Impact,sans-serif;letter-spacing:.04em}
+.credit .c-a{font-size:34px;fill:#cfdcff}
+.credit .c-b{font-size:44px}
+.credit .heart{transform-box:fill-box;transform-origin:center;animation:beat 1.25s ease-in-out infinite;filter:drop-shadow(0 0 8px rgba(255,93,143,.7))}
+.credit .mini{transform-box:fill-box;transform-origin:center;opacity:0;animation:floaty 3.6s ease-in infinite}
+.credit .m1{animation-delay:0s}.credit .m2{animation-delay:1.2s}.credit .m3{animation-delay:2.4s}
+.credit .c-line{stroke-dasharray:300;stroke-dashoffset:300;animation:draw 3.2s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.28)}30%{transform:scale(1)}45%{transform:scale(1.18)}60%{transform:scale(1)}}
+@keyframes floaty{0%{opacity:0;transform:translate(0,0) scale(.35)}15%{opacity:.95}100%{opacity:0;transform:translate(var(--dx,14px),-52px) scale(.55)}}
+.credit .m1{--dx:-18px}.credit .m2{--dx:6px}.credit .m3{--dx:24px}
+@keyframes draw{0%{stroke-dashoffset:300}55%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-300}}
+@media(max-width:1020px){.items-3{grid-template-columns:1fr}.faq-wrap{grid-template-columns:1fr;gap:20px}}
+.foot-bot{padding-bottom:84px}
