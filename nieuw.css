@@ -1,0 +1,97 @@
+/* Metaalhandel Alesio: stoere, strakke huisstijl in blauw (KNHB-achtig): vierkante hoeken, volle vlakken, vette koppen */
+:root{
+  --blauw:#0b4fc9;--blauw-licht:#1f6bf0;--blauw-diep:#08358f;--navy:#071a45;--navy-2:#0a2260;--lijn:#dbe4f5;--vlak:#f2f5fb;
+  --e-global-color-accent:#0b4fc9;--e-global-color-secondary:#0b4fc9;--e-global-color-primary:#071a45;
+}
+html{scroll-behavior:smooth}
+*,*::before,*::after{border-radius:0!important}
+body{color:#2a3350}
+
+/* Koppen: vet en direct */
+.elementor-widget-heading h1.elementor-heading-title{font-weight:800!important;text-transform:uppercase!important;letter-spacing:-.01em;line-height:1.02!important}
+.elementor-widget-heading h2.elementor-heading-title,.elementor-widget-heading h3.elementor-heading-title{font-weight:800!important;text-transform:uppercase!important;letter-spacing:-.005em;line-height:1.1!important}
+.elementor-widget-heading h5.elementor-heading-title{display:inline-block;background:var(--blauw)!important;color:#fff!important;padding:6px 14px!important;font-weight:700;letter-spacing:.14em;font-size:12px!important;text-transform:uppercase}
+.elementor-widget-heading h5.elementor-heading-title *{color:#fff!important}
+
+/* Knoppen */
+.elementor-button{background:var(--blauw)!important;color:#fff!important;font-weight:800!important;letter-spacing:.12em;text-transform:uppercase;border:0!important;box-shadow:none!important;transition:background .2s,transform .2s}
+.elementor-button:hover{background:var(--navy)!important;transform:translateY(-2px)}
+.elementor-button .elementor-button-text,.elementor-button-icon,.elementor-button i{color:#fff!important}
+.elementor-button:not(.nz-btn):after{content:"";display:inline-block;width:0}
+
+/* Header */
+.jkit-nav-menu .jkit-menu>li>a,.jkit-menu-wrapper a{font-weight:700;letter-spacing:.1em}
+.jkit-nav-menu .jkit-menu li.current-menu-item>a,.jkit-nav-menu .jkit-menu li.current_page_item>a{color:#8fb4ff!important}
+
+/* Hero: blauwe overlay met sterke diagonaal */
+.elementor-background-overlay{background-image:linear-gradient(100deg,rgba(7,26,69,.94) 0%,rgba(8,53,143,.78) 52%,rgba(11,79,201,.35) 100%)!important;opacity:1!important}
+
+/* Kaarten en blokken: strak, met blauwe rand bovenaan */
+.elementor-widget-wrap .elementor-widget-container{box-shadow:none}
+.elementor-column.elementor-element[data-element_type=column]>.elementor-widget-wrap.elementor-element-populated{box-shadow:none}
+.elementor-inner-section .elementor-column>.elementor-widget-wrap{border-top:0}
+[class*="elementor-element-"][data-element_type="column"]{--kaart-rand:var(--blauw)}
+
+/* Volle blauwe vlakken */
+.elementor-section.elementor-section-boxed[data-settings*="classic"][class*="elementor-element-"]{}
+section.elementor-top-section[style*="#0a2260"],section.elementor-top-section[style*="#071a45"]{background:var(--blauw)!important}
+
+/* Footer */
+footer,.elementor-location-footer{background:var(--navy)}
+
+/* Formulier in de hero */
+.hf-card{border-top:6px solid var(--blauw);box-shadow:0 24px 60px rgba(7,26,69,.45)!important}
+.hf-card h2{font-weight:800!important;text-transform:uppercase!important;letter-spacing:-.005em;font-size:21px!important;color:var(--navy)!important}
+.hf-card button{background:var(--blauw)!important;text-transform:uppercase!important;letter-spacing:.12em;font-weight:800!important}
+.hf-card button:hover{background:var(--navy)!important}
+.hf-card input:focus,.hf-card textarea:focus,.hf-card select:focus{outline:2px solid var(--blauw)!important;border-color:var(--blauw)!important}
+.hf-list li:before{background-color:var(--blauw)!important}
+.hf-note a{color:var(--blauw)!important}
+
+/* WhatsApp-knop (zwevend) en melding */
+.mn-wa{background:var(--blauw)!important}
+.mn-wa:hover{background:var(--navy)!important}
+.mn-box{border-top:6px solid var(--blauw)}
+
+/* Menuknop */
+.nz-btn{background:linear-gradient(135deg,var(--blauw-licht),var(--blauw-diep))!important;box-shadow:0 8px 22px rgba(11,79,201,.45)}
+.nz-btn .nz-txt strong{text-transform:uppercase;letter-spacing:.04em}
+.nz-btn svg g[fill="#1d7a1d"],.nz-btn svg circle[fill="#1d7a1d"]{fill:#0b4fc9}
+
+/* Geen groen meer: ook de zwevende WhatsApp-knop in huisstijl */
+.wa-float{background:var(--blauw)!important;box-shadow:0 10px 26px rgba(7,26,69,.4)!important;text-transform:uppercase;letter-spacing:.08em}
+.wa-float:hover{background:var(--navy)!important}
+.wa-float:focus-visible{box-shadow:0 0 0 6px var(--navy)!important}
+
+/* Alle koppen even stoer */
+.elementor-widget-heading h4.elementor-heading-title{font-weight:800!important;text-transform:uppercase!important;letter-spacing:-.005em;line-height:1.1!important}
+
+/* Ritme: wit, blauw, lichtgrijs, navy */
+.elementor-element-2a0bc794{background:var(--vlak)!important}
+.elementor-element-7873f1ad{background:var(--blauw)!important}
+.elementor-element-5955d322,.elementor-element-5955d322>.elementor-container{background:var(--navy)!important}
+.elementor-element-490a0d4b .elementor-icon-box-title,.elementor-element-490a0d4b h3{font-weight:800}
+.elementor-element-3cd809b6 blockquote,.elementor-element-3cd809b6 .elementor-testimonial-wrapper{border-left:6px solid var(--blauw)}
+
+.hf-wrap .hf-card button{background:var(--blauw)!important}
+.hf-wrap .hf-card button:hover{background:var(--navy)!important}
+.elementor-widget-icon-box .title,.elementor-widget-icon-box h4.title{text-transform:uppercase!important;font-weight:800!important}
+.elementor-widget-text-editor h2,.elementor-widget-text-editor h3{text-transform:uppercase}
+
+/* Footer: volle navy-balk, kaart eroverheen */
+.elementor-element-5955d322{margin-top:0!important;background:var(--navy)!important}
+.elementor-element-5955d322 .elementor-background-overlay{background:none!important}
+.elementor-element-5955d322 a[href^="#mail-niet"],.elementor-element-5955d322 .mn-trigger{color:#a9c4ff!important}
+.elementor-element-5955d322 a:hover{color:#fff!important}
+.elementor-element-5955d322 [class*="elementor-icon"] i,.elementor-element-5955d322 i.fas{color:#7fa8ff!important}
+/* Logo: groen recycle-icoontje naar blauw */
+img[src*="logo"]{filter:hue-rotate(48deg) saturate(1.1)}
+.elementor-element-5955d322 i.fa-facebook-f{color:#fff!important}
+
+/* Zelfde ritme op alle pagina's: voorlaatste blok licht, laatste blok (footer) navy */
+[data-elementor-type="wp-page"]>section.elementor-top-section:nth-last-of-type(2){background:var(--vlak)!important}
+[data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type{margin-top:0!important;background:var(--navy)!important}
+[data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type .elementor-background-overlay{background:none!important}
+[data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type a[href^="#mail-niet"]{color:#a9c4ff!important}
+[data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type i.fas,[data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type i.far{color:#7fa8ff!important}
+[data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type i.fa-facebook-f{color:#fff!important}
