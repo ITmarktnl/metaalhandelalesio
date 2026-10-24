@@ -408,7 +408,7 @@ in verantwoorde recycling</h2>		</div>
 								<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
 							<i aria-hidden="true" class="fas fa-envelope"></i>						</span>
-										<span class="elementor-icon-list-text">info@metaalhandelalesio.nl</span>
+										<span class="elementor-icon-list-text"><a href="#mail-niet-beschikbaar" class="mn-trigger">E-mail</a></span>
 									</li>
 								<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
@@ -530,30 +530,8 @@ in verantwoorde recycling</h2>		</div>
 		</div>
 				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2b05096a" data-id="2b05096a" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-6793c78d elementor-widget elementor-widget-heading" data-id="6793c78d" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h4 class="elementor-heading-title elementor-size-default">Nieuwsbrief</h4>		</div>
-				</div>
-				<div class="elementor-element elementor-element-696a5530 elementor-widget elementor-widget-jkit_mailchimp" data-id="696a5530" data-element_type="widget" data-widget_type="jkit_mailchimp.default">
-				<div class="elementor-widget-container">
-			<div class="jeg-elementor-kit jkit-mailchimp style-inline jeg_module_92_4_67446f7111176"><form method="post" class="jkit-mailchimp-form" data-listed="" data-success-message="Successfully listed this email" data-error-message="Er is iets fout gegaan">
-            <div class="jkit-mailchimp-message"></div>
-            <div class="jkit-form-wrapper email-form">
-                <div class="jkit-mailchimp-email jkit-input-wrapper input-container">
-            <div class="jkit-form-group">
-                <div class="jkit-input-element-container jkit-input-group">
-                    <input type="email" name="email" class="jkit-email jkit-form-control " placeholder="Uw e-mail adres" required="">
-                </div>
-            </div>
-        </div>
-<div class="jkit-submit-input-holder jkit-input-wrapper">
-            <button type="submit" class="jkit-mailchimp-submit position-before" name="jkit-mailchimp">
-                Abonneer 
-            </button>
-        </div>
-            </div>
-        </form></div>		</div>
-				</div>
+						
+				
 				<div class="elementor-element elementor-element-1c01228f elementor-shape-circle e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="1c01228f" data-element_type="widget" data-widget_type="social-icons.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-social-icons-wrapper elementor-grid">
@@ -656,5 +634,38 @@ wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
 .wa-float:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px #128c4a}
 @media (max-width:640px){.wa-float{right:14px;bottom:14px;padding:15px;border-radius:50%}.wa-float span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
 </style>
+<!-- E-mail niet beschikbaar: melding met WhatsApp -->
+<div class="mn-overlay" id="mail-niet-beschikbaar" role="dialog" aria-modal="true" aria-labelledby="mn-titel" hidden>
+<div class="mn-box">
+<button type="button" class="mn-x" aria-label="Sluiten">&times;</button>
+<h2 id="mn-titel">E-mail is niet beschikbaar</h2>
+<p>Je kunt ons op dit moment niet per e-mail bereiken. Stuur ons een bericht via WhatsApp, dan reageren we zo snel mogelijk.</p>
+<a class="mn-wa" href="https://wa.me/31644008756?text=Hallo%20Metaalhandel%20Alesio%2C%20ik%20heb%20een%20vraag." target="_blank" rel="noopener">Open WhatsApp (06 44008756)</a>
+</div></div>
+<style>
+.mn-overlay{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.65)}
+.mn-overlay[hidden]{display:none}
+.mn-box{position:relative;max-width:440px;width:100%;padding:34px 30px 28px;background:#fff;color:#1a1a1a;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.45);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;text-align:center}
+.mn-box h2{margin:0 0 12px;font-size:24px;line-height:1.2;color:#1a1a1a}
+.mn-box p{margin:0 0 22px;font-size:16px;line-height:1.55;color:#333}
+.mn-wa{display:inline-block;padding:15px 26px;background:#25d366;color:#fff!important;font:700 16px/1 system-ui,Arial,sans-serif;border-radius:999px;text-decoration:none!important}
+.mn-wa:hover{background:#1ebe5a}
+.mn-x{position:absolute;top:8px;right:12px;width:38px;height:38px;border:0;background:none;font-size:30px;line-height:1;color:#555;cursor:pointer}
+.mn-x:hover{color:#000}
+.mn-trigger{cursor:pointer}
+</style>
+<script>
+(function(){
+var o=document.getElementById('mail-niet-beschikbaar');if(!o)return;var last=null;
+function open(e){if(e)e.preventDefault();last=document.activeElement;o.hidden=false;var b=o.querySelector('.mn-wa');if(b)b.focus()}
+function close(){o.hidden=true;if(last&&last.focus)last.focus()}
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href^="mailto:"],.mn-trigger');
+  if(a){open(e);return}
+  if(e.target===o||e.target.closest('.mn-x'))close();
+},true);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!o.hidden)close()});
+})();
+</script>
 </body>
 </html>
