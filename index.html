@@ -160,7 +160,15 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		</section>
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-4a46f718 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4a46f718" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_ken_burns&quot;:&quot;yes&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:114,&quot;url&quot;:&quot;\/wp-content\/uploads\/2023\/08\/1-scaled-1.jpg&quot;},{&quot;id&quot;:115,&quot;url&quot;:&quot;\/wp-content\/uploads\/2023\/08\/2.png&quot;},{&quot;id&quot;:116,&quot;url&quot;:&quot;\/wp-content\/uploads\/2023\/08\/1233134.png&quot;},{&quot;id&quot;:117,&quot;url&quot;:&quot;\/wp-content\/uploads\/2023\/08\/eewaste.png&quot;}],&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_duration&quot;:5000,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;background_slideshow_transition_duration&quot;:500,&quot;background_slideshow_ken_burns_zoom_direction&quot;:&quot;in&quot;}">
 							<div class="elementor-background-overlay"></div>
-							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-container elementor-column-gap-default hf-wrap">
+<form class="hf-card" id="hero-form" novalidate>
+<h2>Direct contact</h2><p class="hf-sub">Vul in en verstuur via WhatsApp.</p>
+<label>Naam<input name="naam" type="text" autocomplete="name" required></label>
+<label>Telefoonnummer<input name="tel" type="tel" autocomplete="tel"></label>
+<label>Waarmee kunnen we helpen?<textarea name="bericht" rows="4" required></textarea></label>
+<p class="hf-err" hidden>Vul je naam en bericht in.</p>
+<button type="submit">Verstuur via WhatsApp</button>
+</form>
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-51e6541e" data-id="51e6541e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-6154eab6 elementor-widget__width-auto animated-slow elementor-invisible elementor-widget elementor-widget-heading" data-id="6154eab6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-widget_type="heading.default">
@@ -791,6 +799,24 @@ document.addEventListener('click',function(e){
 },true);
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!o.hidden)close()});
 })();
+</script>
+<style>
+.hf-wrap{position:relative}
+.hf-card{box-sizing:border-box;background:#fff;color:#1a1a1a;border-radius:14px;padding:26px 24px;box-shadow:0 20px 50px rgba(0,0,0,.35);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;position:absolute;right:15px;top:50%;transform:translateY(-50%);width:360px;z-index:5;text-align:left}
+.hf-card h2{margin:0 0 4px;font-size:24px;line-height:1.2;color:#1a1a1a;text-transform:none!important}
+.hf-card .hf-sub{margin:0 0 14px;font-size:14px;color:#555}
+.hf-card label{display:block;margin:0 0 12px;font-size:13px;font-weight:600;color:#333}
+.hf-card input,.hf-card textarea{box-sizing:border-box;display:block;width:100%;margin-top:4px;padding:10px 12px;border:1px solid #cfcfcf;border-radius:8px;background:#fff;font:400 15px/1.4 system-ui,Arial,sans-serif;color:#1a1a1a}
+.hf-card input:focus,.hf-card textarea:focus{outline:2px solid #25d366;border-color:#25d366}
+.hf-card textarea{resize:vertical}
+.hf-card .hf-err{margin:0 0 10px;font-size:13px;color:#c0392b}
+.hf-card button{display:block;width:100%;padding:14px;border:0!important;border-radius:999px!important;background:#25d366!important;color:#fff!important;font:700 16px/1 system-ui,Arial,sans-serif!important;text-transform:none!important;cursor:pointer}
+.hf-card button:hover{background:#1ebe5a!important}
+@media(min-width:1025px){.hf-wrap>.elementor-column{width:58%!important}}
+@media(max-width:1024px){.hf-card{position:static;transform:none;width:100%;max-width:520px;margin:30px auto 0;order:2}.hf-wrap{flex-wrap:wrap}.hf-wrap>.elementor-column{order:1}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){var f=document.getElementById('hero-form');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var n=f.naam.value.trim(),t=f.tel.value.trim(),b=f.bericht.value.trim(),er=f.querySelector('.hf-err');if(!n||!b){er.hidden=false;return}er.hidden=true;var m='Hallo Metaalhandel Alesio,\n\n'+b+'\n\nNaam: '+n+(t?'\nTelefoon: '+t:'');window.open('https://wa.me/31644008756?text='+encodeURIComponent(m),'_blank','noopener')})});
 </script>
 </body>
 </html>
