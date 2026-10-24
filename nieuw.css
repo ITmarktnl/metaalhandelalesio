@@ -95,3 +95,5 @@ img[src*="logo"]{filter:hue-rotate(48deg) saturate(1.1)}
 [data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type a[href^="#mail-niet"]{color:#a9c4ff!important}
 [data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type i.fas,[data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type i.far{color:#7fa8ff!important}
 [data-elementor-type="wp-page"]>section.elementor-top-section:last-of-type i.fa-facebook-f{color:#fff!important}
+.elementor-widget-heading:has(h5.elementor-heading-title) .elementor-widget-container,.elementor-widget-heading:has(h5.elementor-heading-title){background:none!important}
+.elementor-widget-heading h5.elementor-heading-title{box-shadow:none!important;border:0!important}
