@@ -236,3 +236,7 @@ a{color:inherit}
 
 .f-btns{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:20px}
 .f-btns .pill{padding:13px 22px}
+
+.mat.mat-5{grid-template-columns:repeat(5,1fr)}
+.mat.mat-5 li{padding:26px 8px;font-size:1.15rem}
+@media(max-width:1020px){.mat.mat-5{grid-template-columns:repeat(2,1fr)}}
